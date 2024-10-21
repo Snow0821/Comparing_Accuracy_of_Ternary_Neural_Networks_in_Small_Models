@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "catnn"
+version = "0.1.0"
+description = "code for my paper"
+authors = ["Choi Soon Ho"]
+readme = "README.md"
+license = "MIT"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = ">=1.21, <2.0"
+pandas = "2.1.4"
+torch = [
+    { version = "2.2.2", markers = "sys_platform == 'darwin' and platform_machine == 'x86_64'" },
+    { version = ">=2.0.0, <3.0.0", markers = "sys_platform != 'darwin'" }
+]
+torchvision = ">=0.15.0, <1.0.0"
+pillow = "^10.4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+scikit-learn = "^1.2.2"
+matplotlib = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
